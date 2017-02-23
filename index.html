@@ -17,7 +17,7 @@
     <div class="wrapper">
       <header>
         <h1>Joel Sprinkle</h1>
-		<img src="/images/Me/me.jpg" alt="Me" width="200">
+		<img src="images/Me/me.jpg" alt="Me" width="200">
         <p>Hello World!</p>
 	    <a href="#projects">Projects</a><br>
 		<a href="#about">About</a><br>
@@ -65,8 +65,17 @@
 		
 		<p>Hi, Im Joel Sprinkle (yes that is my real last name). I am software developer that just graduated from Carleton University. When I'm not sitting behind a computer, on any given thursday or friday evening I can usually be found bouldering at <a href="http://www.altitudegym.ca" target="_blank">Altitude</a> rock climbing gym. During the winter I turn into an indoor kid, spending a lot of time watching movies/tv. For the most part I like fantasy, sci-fi, and comedies, so everything from <strike>Battlestar Galactica Wars Trek</strike> Battlestar Galatica/Star Trek/Star Wars, to Park and Rec/Modern Family. During the summer months I enjoy getting outside whether that is on my bike, my skateboard, or just out for a walk.</p>
 		
-		<img class="imgshadow" src="images/Me/bouldering in BC.jpg" alt="Bouldering at Juan de Fuca Botanical Beach" width="400">
-  		
+		<img class="imgshadow" id="myImg" src="images/Me/bouldering in BC.jpg" alt="Bouldering at Juan de Fuca Botanical Beach" width="300">
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		<!-- The Close Button -->
+		  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content" id="img01">
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption"></div>
+		</div>
+		
 		<p>I am a genuinely curious person. Have you ever had someone get annoyed with you because you ask why to much? I have...</p>
 	    <blockquote><p>I have no special talents. I am only passionately curious. – Albert Einstein</p></blockquote>
 		<p>I believe that as longs as a person stays curious they can learn to do anything. My own unrelentless thirst to know how everything works, has definitally gotten me to where I am today.</p>
@@ -141,5 +150,6 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+	<script src="javascripts/modal.js"></script>
   </body>
 </html>
