@@ -131,6 +131,7 @@ header ul {
   width:270px;
 }
 
+
 header li {
   width:89px;
   float:left;
@@ -249,6 +250,12 @@ footer {
     right:50px;
     top:52px;
   }
+  
+  #movebadges {
+    position:absolute;
+    right:60px;
+    top:56px;
+  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -290,9 +297,6 @@ footer {
     color:#444;
   }
 }
-
-
-
 
 
 
