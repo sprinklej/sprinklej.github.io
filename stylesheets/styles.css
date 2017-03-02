@@ -310,6 +310,7 @@ footer {
 /* SLIDE SHOW CSS */
 
 /* center preview images */
+/*
 .pcntr{
   text-align:center;
   max-height:150px;
@@ -320,8 +321,8 @@ footer {
   max-height:100%; 
   display:inline-block;
 }
+*/
 
-/*
 .row > .column {
   padding: 0 8px;
 }
@@ -336,7 +337,7 @@ footer {
   float: left;
   width: 25%;
 }
-*/
+
 /* The Modal (background) */
 .modal {
   display: none;
