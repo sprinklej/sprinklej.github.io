@@ -305,20 +305,27 @@ footer {
   }
 }
 
+p {
+position:relative;
+}
 
 
 /* SLIDE SHOW CSS */
-
+/*
 .picbox {
   height:150px;
   min-width: 325px;
   padding-bottom:20px;
 }
-
+*/
 .picbox .icntr {
   max-width:100%;
   max-height:100%; 
   display:inline-block;
+}
+
+.icntr {
+  height:150px;
 }
 
 /* center preview images */
