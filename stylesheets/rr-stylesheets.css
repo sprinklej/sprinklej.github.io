@@ -1,0 +1,84 @@
+.container {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.boxes{
+  margin-top:30px;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  color: lightgrey;
+  display: block; /* For Firefox */
+}
+
+/* nav bar offset */
+.offset {
+padding-top:50px;
+margin-top:-50px;
+}
+
+/* Score table and cell styling */
+.playerTable {
+  background-color: white;
+  opacity:1;
+  width:90%;
+  margin-left:5%; 
+  margin-right:5%;
+}
+
+.cntrcells {
+  text-align:center;
+}
+
+.handCells {
+  min-width:120px;
+}
+
+td {
+  min-width:50px;
+  height:60px;
+  width:80%;
+}
+
+
+.leftbtncells{
+  width:20px;
+}
+
+.editableName {
+  border:1px solid lightgrey;
+  width:90%;
+}
+
+.editableNmbrs {
+  border:1px solid lightgrey;
+}
+
+/* Add player button */
+#addRowBtn {
+  margin-left:5%; 
+  margin-bottom:12px;
+}
+
+/* Combination table */
+.combTable {
+ table-layout:fixed;
+ width:350px;
+ margin-left:5px;
+}
+
+table.combTable td {
+  height:20px;
+}
+
+/* Score table */
+.scoreVTable {
+  table-layout:fixed;
+  width:175px;
+  margin-left:5px;
+}
+
+table.scoreVTable td {
+  height:20px;
+}

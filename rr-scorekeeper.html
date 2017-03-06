@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/navbar-fixed-top.css">
+    <link rel="stylesheet" href="stylesheets/rr-stylesheets.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <title>RR-ScoreKeeper</title>
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <!-- Fixed navbar-->
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button><a class="navbar-brand">RR-ScoreKeeper</a></div>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#keep-score">Keep-Score</a></li>
+              <li><a href="#how-to">How-To</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <h3 class="offset" id="keep-score">Keep Score</h3>
+        <p>This table allows you to keep score while you play Riondel Rummy with your friend's 😄</p>
+        <table class="table table-striped playerTable">
+          <tbody>
+            <tr>
+              <th>Players</th>
+              <th colspan="3">Combinations</th>
+              <th colspan="3">Score</th>
+              <th> </th>
+            </tr>
+            <tr>
+              <td><div class="editableName" contenteditable="true" placeholder="Player Name"></div></td>
+              <td class="cntrcells leftbtncells"><button class="btn btn-primary btn-xs btn-left" type="button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button></td>
+              <td class="handCells cntrcells">1 - Two sets of 3</td>
+              <td class="cntrcells"><button class="btn btn-primary btn-xs btn-right" type="button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></td>
+              <td><div class="editableNmbrs" contenteditable="true" placeholder="000"></div></td>
+              <td><button class="btn btn-primary btn-xs btn-plus" type="button"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button></td>
+              <td>0</td>
+              <td><button class="btn btn-danger btn-xs" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+            </tr>
+            <tr>
+              <td><div class="editableName" contenteditable="true" placeholder="Player Name"></div></td>
+              <td class="cntrcells leftbtncells"><button class="btn btn-primary btn-xs btn-left" type="button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button></td>
+              <td class="handCells cntrcells">1 - Two sets of 3</td>
+              <td class="cntrcells"><button class="btn btn-primary btn-xs btn-right" type="button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></td>
+              <td><div class="editableNmbrs" contenteditable="true" placeholder="000"></div></td>
+              <td><button class="btn btn-primary btn-xs btn-plus" type="button"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button></td>
+              <td>0</td>
+              <td><button class="btn btn-danger btn-xs" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <button class="btn btn-success" id="addRowBtn">Add Player</button>
+      </div>
+      
+      
+      <div class="container boxes">
+        <h3 class="offset" id="how-to">How-To</h3>
+        <p>The object of Riondel Rummy is to be the first one to complete the eight combinations, and finish with the lowest score</p>
+        
+        <h4>Terminology</h4>
+        <ul>
+          <li> <b>Set:</b><i> n</i>-of-a-kind, i.e. 5♥︎, 5♦︎, 5♠︎ - is a set of 3</li>
+          <li> <b>Run:</b> Cards of the same suit in ascending/descending order, i.e. 4♥︎, 5♥︎, 6♥︎, 7♥︎ - is a run of 4</li>
+          <li> <b>Combinations:</b> Refer to the set(s)/run(s) that need to be accomplished in order to complete the game. There are <a href="#combinations">8 combinations </a>that must be completed in sequential order, as well a player can only accomplish 1 combination per round</li>
+        </ul>
+        
+        <h4>Setup</h4>
+        <ul>
+          <li>The game is played with 2 decks of cards, including the Jokers</li><li>The game is best played with 4 players, however it can be played with 2-6 players</li>
+          <li>If you want to play with more than 6 players try adding a third deck of cards</li>
+          <li>Each player is dealt 13 cards, the remaining cards are placed faced down in the center, this is the pickup pile</li>
+          <li>The top card in the pickup pile is turned over and placed in the discard pile</li>
+        </ul>
+        
+        <h4>Starting The Game</h4>
+        <ul>
+          <li>Turns are taken in a clockwise fashion, starting with the person to the left of the dealer</li>
+          <li>At the start of a players turn the player must draw a single card, the top card from the pickup or discard pile may be picked up</li>
+          <li>The player attempts to lay down the current combination they are working on. The whole combination must be laid at the same time, i.e. if the player is trying to lay down the combination "Two sets of 3" the player must lay down both sets at the same time</li>
+          <li>Once player has already laid down their own combination, they can add cards to other combinations that have been played by other players</li>
+          <li>At the end of a players turn, the player must put a card into the discard pile (face up)</li>
+          <li>If the card that was just discarded could of been added to other combinations that have been laid down and somebody notices before the next person starts their turn and yells out: rummy, or Google, or pizza, or what ever you decide on, the person that discarded the card must take one card (that they do not choose) from all of the other players</li>
+          <li>The current round ends when a player discards a card and has no other cards in their hand, if a player has played all of their cards and has no card to discard the round is not over and it is the next persons turn</li>
+          <li>At the end of a round each player adds up the <a href="#scoring">value </a> of the cards that they still currently hold in their hand, this value is added to their total score</li>
+          <li>For the next round the person to the left of the dealer is now the dealer</li><li>If any players did not lay down their current combination in the previous round then they do not advance to the next combination and try and accomplish the same combination again</li>
+          <li>Once the 8th combination has been played, the game is over </li>
+        </ul>
+        
+        <h4 class="offset" id="combinations">Combinations</h4>
+        <table class="table table-striped table-bordered combTable">
+          <tbody>
+            <tr>
+              <th style="width:60px;">Level</th>
+              <th>Sets</th><th>Runs</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Two sets of 3</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>One set of 3</td>
+              <td>One run of 4</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>-</td>
+              <td>Two runs of 4</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Three sets of 3</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Two sets of 3</td>
+              <td>One run of 4</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>One set of 3</td>
+              <td>Two runs of 4</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>-</td>
+              <td>Three runs of 4</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Two sets of 3</td>
+              <td>One run of 7</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h4 class="offset" id="scoring">Scoring</h4>
+        <table class="table table-striped table-bordered scoreVTable">
+          <tbody>
+            <tr>
+              <th>Cards</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td>3-10</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Face cards</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Jokers</td>
+              <td>50</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h4>Notes</h4>
+        <ul>
+          <li>Aces are high</li>
+          <li>2's and Jokers are wild</li>
+          <li>When a set or run is laid down no more than 50% of the cards can be wild cards, i.e. 5♠︎, Joker, Joker is not valid</li>
+          <li>During a single round sets cannot be repeated, i.e. if a player has laid down the set 5♣︎, 5♣︎, 5♣︎, another player cannot play that set until the next round</li>
+          <li>If the pickup pile is depleted during a round the discard pile is shuffled and then becomes a new pickup pile </li>
+        </ul>
+      </div>
+      
+      
+      <div class="container boxes">
+        <h3 class="offset" id="about">About</h3>
+        <p>This project was built using <a href="https://nodejs.org" target="_blank">Node</a>, <a href="https://expressjs.com" target="_blank">Express</a>,  <strike> <a href="https://github.com/pugjs/pug/issues/2184" target="_blank">jade</a></strike>, <a href="https://pugjs.org/api/getting-started.html" target="_blank">pug</a>,  <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, and <a href="http://jquery.com" target="_blank">jQuery</a>.</p>
+        <p> <small style="color:grey;">Created by: <a href="https://sprinklej.github.io" target="_blank">Joel Sprinkle</a></small></p>
+      </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="javascripts/rr-scripts.js"></script>
+  </body>
+</html>
